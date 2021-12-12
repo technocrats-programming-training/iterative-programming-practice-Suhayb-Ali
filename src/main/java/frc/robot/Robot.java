@@ -15,13 +15,14 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * project.
  */
 public class Robot extends TimedRobot {
-
+int i = 1;
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
    */
   @Override
   public void robotInit() {}
+System.out.println("Robot Has Initialized")
 
   /**
    * This function is called every robot packet, no matter the mode. Use this for items like
@@ -32,7 +33,10 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotPeriodic() {}
-
+while(true) { 
+System.out.println(i);
+i++;  
+}
   /**
    * This autonomous (along with the chooser code above) shows how to select between different
    * autonomous modes using the dashboard. The sendable chooser code works with the Java
