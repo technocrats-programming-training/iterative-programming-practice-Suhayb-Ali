@@ -15,15 +15,20 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * project.
  */
 public class Robot extends TimedRobot {
-int i = 1;
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
    */
-  @Override
-  public void robotInit() {}
-System.out.println("Robot Has Initialized")
+   int rperiodic = 0; 
+   int aperiodic = 0; 
+   int tperiodic = 0; 
+   int ainit; 
+   int tinit; 
 
+  @Override
+  public void robotInit() {
+System.out.println("Robot Has Initialized");
+  }
   /**
    * This function is called every robot packet, no matter the mode. Use this for items like
    * diagnostics that you want ran during disabled, autonomous, teleoperated and test.
@@ -32,10 +37,9 @@ System.out.println("Robot Has Initialized")
    * SmartDashboard integrated updating.
    */
   @Override
-  public void robotPeriodic() {}
-while(i = 1; i < 1000; i++) { 
-System.out.println(i);
-}
+  public void robotPeriodic() {
+    rperiodic += 1;  
+    System.out.println(rperiodic);
 }
   /**
    * This autonomous (along with the chooser code above) shows how to select between different
@@ -48,19 +52,31 @@ System.out.println(i);
    * chooser code above as well.
    */
   @Override
-  public void autonomousInit() {}
-
+  public void autonomousInit() {
+System.out.println("Starting Autonomous");
+aperiodic = 0; 
+ainit += 1; 
+  }
   /** This function is called periodically during autonomous. */
   @Override
-  public void autonomousPeriodic() {}
-
+  public void autonomousPeriodic() {
+aperiodic += 1; 
+System.out.println(ainit + "," + aperiodic);
+  }
   /** This function is called once when teleop is enabled. */
   @Override
-  public void teleopInit() {}
+  public void teleopInit() {
+    System.out.println("Starting Teleop");
+    tperiodic = 0; 
+    tinit += 1; 
+  }
 
   /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {}
+  public void teleopPeriodic() {
+    tperiodic += 1; 
+System.out.println(tinit + "," + tperiodic);
+  }
 
   /** This function is called once when the robot is disabled. */
   @Override
