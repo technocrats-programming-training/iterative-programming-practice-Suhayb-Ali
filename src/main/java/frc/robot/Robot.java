@@ -33,9 +33,9 @@ System.out.println("Robot Has Initialized")
    */
   @Override
   public void robotPeriodic() {}
-while(true) { 
+while(i = 1; i < 1000; i++) { 
 System.out.println(i);
-i++;  
+}
 }
   /**
    * This autonomous (along with the chooser code above) shows how to select between different
